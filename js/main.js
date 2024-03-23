@@ -38,11 +38,12 @@ const form = document.querySelector("form");
 const fullName = document.querySelector(".name");
 const number = document.querySelector(".number");
 const email = document.querySelector(".email");
-const message = document.querySelector(".message");
+const message = document.querySelectorAll("textarea");
+const inputs = document.querySelectorAll('input')
 
 function sendEmail() {
 
-    const bodyMessage = `Full Name: ${fullName.value}<br> Number: ${number.value}<br> Email: ${email.value}<br> Body ${message.value}`;
+    const bodyMessage = `Full Name: ${fullName.value}<br> Number: ${number.value}<br> Email: ${email.value}<br> Body: ${message.value}`;
 
     const mail = `${email.value}`;
 
@@ -55,12 +56,16 @@ function sendEmail() {
         Subject : "new contact",
         Body : bodyMessage
     }).then(
-      message => alert(message)
+      message => alert("Hello there,\nThank you for reaching out! Your message is important to me, and I appreciate your patience. I'll get back to you as soon as possible.\nBest regards,\nRidwan")
     );
 }
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+    
 
     sendEmail();
+    
+    inputs.forEach(input => input.value = '');
+    message.forEach(textarea => textarea.value = '');
 });
