@@ -234,6 +234,8 @@ body {
   border: 0px;
   width: 100%;
   padding: 10px;
+  -webkit-box-shadow: 0 0 20px rgba(27, 137, 227, 0.649);
+          box-shadow: 0 0 20px rgba(27, 137, 227, 0.649);
 }
 
 .message {
@@ -244,11 +246,18 @@ body {
   min-height: 182px;
   padding: 5px;
   vertical-align: top;
+  -webkit-box-shadow: 0 0 20px rgba(27, 137, 227, 0.649);
+          box-shadow: 0 0 20px rgba(27, 137, 227, 0.649);
 }
 
 .textArea:focus {
   border: 0px !important;
   background-color: #4e4e4e;
+}
+
+#contact form button {
+  -webkit-box-shadow: 0 0 30px rgba(27, 137, 227, 0.649);
+          box-shadow: 0 0 30px rgba(27, 137, 227, 0.649);
 }
 
 @media (max-width: 767px) {
