@@ -154,6 +154,7 @@ body {
   opacity: 0;
   -webkit-transition: opacity 0.25s;
   transition: opacity 0.25s;
+  opacity: 1;
 }
 
 .image__overlay--blur {
@@ -172,10 +173,6 @@ body {
   transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
-}
-
-.image__overlay:hover {
-  opacity: 1;
 }
 
 .image__overlay:hover > * {
